@@ -28,7 +28,7 @@ Le Projet de Nichoir Connecté est une initiative permettant d'observer l'activi
 ## Dépendances
 
 ### Mises à jour
-Avant d'installer les dépendances, veuillez faire une mise à jour du système en saissisant les commandes suivantes dans un terminal :
+Avant d'installer les dépendances, veuillez faire une mise à jour du système en saisissant les commandes suivantes dans un terminal :
 
 - `sudo apt-get update`
 - `sudo apt-get upgrade`
@@ -39,6 +39,7 @@ Voici la liste des dépendances nécessaires pour le fonctionnement de ce projet
 
 - **pip** : `sudo apt-get install python3-pip`
 - **picamera** : `pip3 install picamera`
+- **botle** : `pip3 install bottle`
 - **git** : `sudo apt-get install git`
 
 ## Configuration et Utilisation
@@ -47,13 +48,14 @@ Voici la liste des dépendances nécessaires pour le fonctionnement de ce projet
 
 `git clone https://github.com/CREPP-PLOEMEUR/Nichoirs_a_oiseaux`
 
-2. Installez les dépendances nécessaires en exécutant `pip install picamera` dans un terminal
+2. Exécutez le programme à l'aide de la commande `python3 main.py`.
 
-3. Configurez les paramètres WiFi dans le script Python.
+3. Vous pouvez accéder au flux vidéo et aux notifications via l'adresse IP de votre Raspberry Pi.
 
-4. Exécutez le programme à l'aide de la commande `python main.py`.
+## Axes d'optimisations
 
-5. Vous pouvez accéder au flux vidéo et aux notifications via l'adresse IP de votre Raspberry Pi.
+1. Réduire la consommation de l'ensemble [1]
+2. Faire une redirection de port pour accéder au nichoir depuis l'extérieur du réseau local
 
 ## Contribution
 
@@ -62,6 +64,11 @@ Les contributions à ce projet sont les bienvenues. Si vous souhaitez apporter d
 
 **Note**: Ce projet est à titre expérimental et à des fins éducatives. Utilisez-le de manière responsable.
 
+
+## Bibliographie et lectures associées
+
+[1] Jeff Geerling, "Raspberry Pi Zero - Conserve power and reduce draw to 80mA"
+[2] Nicolas Le Guerroué
 
 
 *Ce README a été rédigé par Nicolas Le Guerroué*

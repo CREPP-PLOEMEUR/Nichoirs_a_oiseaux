@@ -4,7 +4,7 @@ import RPi.GPIO as GPIO			#Gestion des entrés-sorties
 from picamera import PiCamera 	#Gestion de la caméra
 import Adafruit_DHT				#Gestion du DHTXX
 import time						#Gestion du temps
-
+from WebServer import WebServer
 
 #Paramètres
 PIR_Pin = 12   #Notation BCM
@@ -14,7 +14,7 @@ DHT_Pin = 21	#Notation GPIO
 
 camera = PiCamera()
 dht = Adafruit_DHT.DHT22
-
+server = WebServer()
 
 def initPIR():
 	"""Initalise la broche PIR en entrée"""
@@ -30,6 +30,16 @@ def initCamera():
 	"""Initalise la camera"""
 	camera.resolution = (800, 600)
 	camera.framerate = 15
+ 
+def initWebServer():
+	
+	server.setLocationFile("index.html")
+	server.setPort(9000)
+	server.run()
+ 
+def generateWebPage():
+    
+    print("todo")
 	
 def takePicture():
 	"""Allume la LED, prend une photo et arrete la LED"""
@@ -56,6 +66,7 @@ def main():
 	initPIR()
 	initLED()
 	initCamera()
+	initWebServer()
 	
 	print("Nichoir_V0 : Start")
 	
