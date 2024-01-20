@@ -6,11 +6,13 @@ import time						#Gestion du temps
 
 
 #Paramètres
-PIR_Pin = 12   #Notation BCM
-LED_Pin = 24		#Notation BCM
+PIR_Pin = 12   #Notation BCM  (GPIO 26)
+LED_Pin = 24		#Notation BCM (GPIO 5)
 #Initialisation
 
 camera = Picamera2()
+
+camera.start
 
 def initPIR():
 	"""Initalise la broche PIR en entrée"""
