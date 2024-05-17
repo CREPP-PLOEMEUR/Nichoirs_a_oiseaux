@@ -8,6 +8,8 @@
 */
 #define PLATEFORM ESP32_CAM
 
+
+
 /*!
  Other settings
 */

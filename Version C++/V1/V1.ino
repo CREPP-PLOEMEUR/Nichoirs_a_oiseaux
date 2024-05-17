@@ -21,6 +21,10 @@ void setup() {
   wifi.init();
 
 
+  eeprom
+
+
+
   /*!
     Unit tests
   */
